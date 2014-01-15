@@ -4,7 +4,7 @@ class CreateSongs < ActiveRecord::Migration
       t.string :name
       t.string :artist
       t.text :comment
-      t.number :stars
+      t.integer :stars
 
       t.timestamps
     end
