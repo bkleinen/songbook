@@ -37,6 +37,8 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.1'
   gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'launchy' # this enables save_and_open_page
 end
 
 

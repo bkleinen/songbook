@@ -17,6 +17,9 @@ RSpec.configure do |config|
   # gna. still necessary and not in the Capybara doc.
   # see http://stackoverflow.com/questions/8862967/visit-method-not-found-in-my-rspec
   config.include Capybara::DSL
+  #https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
+  config.include FactoryGirl::Syntax::Methods
+
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -26,7 +29,7 @@ RSpec.configure do |config|
   # config.mock_with :rr
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  #config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
