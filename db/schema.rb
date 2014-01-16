@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115202407) do
+ActiveRecord::Schema.define(version: 20140116171421) do
 
   create_table "songs", force: true do |t|
-    t.string   "name"
+    t.string   "title"
     t.string   "artist"
     t.text     "comment"
     t.integer  "stars"
