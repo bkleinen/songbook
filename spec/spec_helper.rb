@@ -14,6 +14,9 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
+  # gna. still necessary and not in the Capybara doc.
+  # see http://stackoverflow.com/questions/8862967/visit-method-not-found-in-my-rspec
+  config.include Capybara::DSL
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

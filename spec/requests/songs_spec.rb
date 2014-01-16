@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe "Songs" do
-  describe "GET /songs" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get songs_path
-      response.status.should be(200)
+  describe "index" do
+    it "shows the headline" do
+      visit songs_path
+      expect(page).to have_content 'Listing songs'
     end
   end
 end
