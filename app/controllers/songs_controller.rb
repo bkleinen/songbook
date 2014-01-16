@@ -17,6 +17,10 @@ class SongsController < ApplicationController
   def show
   end
 
+  def landing
+    @song = Song.last
+  end
+
   # GET /songs/new
   def new
     @song = Song.new
