@@ -39,6 +39,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'launchy' # this enables save_and_open_page
+  gem 'orderly'
 end
 
 

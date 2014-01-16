@@ -4,7 +4,12 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+    if params[:sort]
+      # see http://guides.rubyonrails.org/active_record_querying.html
+      @songs = Song.order(stars: :desc)
+    else
+      @songs = Song.all
+    end
   end
 
   # GET /songs/1
