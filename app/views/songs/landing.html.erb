@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p> Hi there.</p>
-<p>Latest Song: <%= @song.title %> by <%= @song.artist %></p>
+<p>
+<% if @song %>
+  Latest Song: <%= @song.title %> by <%= @song.artist %>
+<% else %>
+  No songs so far.
+<% end %>
+
+</p>
 
