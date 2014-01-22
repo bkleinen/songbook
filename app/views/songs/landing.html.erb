@@ -2,8 +2,10 @@
 
 <p> Hi there.</p>
 <p>
-<% if @song %>
-  Latest Song: <%= @song.title %> by <%= @song.artist %>
+<% if @song
+
+  %>
+  Latest Song: <%= link_to "#{@song.title} by #{@song.artist}", @song %>
 <% else %>
   No songs so far.
 <% end %>
