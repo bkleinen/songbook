@@ -5,7 +5,13 @@ Rails Songbook
 
 ## Notes on Creating the Artist Selector
 
-http://guides.rubyonrails.org/form_helpers.html
+see http://guides.rubyonrails.org/form_helpers.html
 
-<%= f.select(:city_id, ...) %>
+    <%= f.select(:city_id, ...) %>
+
+    <%= collection_select(:person, :city_id, City.all, :id, :name) %>
+
+translates to
+
+    <%= f.collection_select( :artist_id, Artist.all, :id, :last) %>
 
