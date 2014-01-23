@@ -2,8 +2,31 @@
 
 FactoryGirl.define do
   factory :artist do
-    first "MyString"
-    middle "MyString"
-    last "MyString"
+    first 'Elvis'
+    middle ''
+    last 'Presley'
   end
+  factory :kenny, class: Artist do
+    first 'Kenny'
+    middle ''
+    last 'Rogers'
+  end
+
+  factory :nancy, class: Artist  do
+    first 'Nancy'
+    middle ''
+    last 'Sinatra'
+  end
+
+  factory :cat, class: Artist do
+    first 'Cat'
+    middle ''
+    last 'Stevens'
+  end
+  factory :pulp, class: Artist do
+    first ''
+    middle ''
+    last 'Pulp'
+  end
+
 end

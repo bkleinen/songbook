@@ -5,7 +5,7 @@
 <% if @song
 
   %>
-  Latest Song: <%= link_to "#{@song.title} by #{@song.artist}", @song %>
+  Latest Song: <%= link_to "#{@song.title} by #{@song.artist.name}", @song %>
 <% else %>
   No songs so far.
 <% end %>

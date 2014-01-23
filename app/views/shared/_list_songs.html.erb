@@ -16,7 +16,7 @@
     <% @songs.each do |song| %>
       <tr>
         <td><%= song.title %></td>
-        <td><%= song.artist %></td>
+        <td><%= song.artist.name %></td>
         <td><%= song.comment %></td>
         <td><%= song.stars %></td>
         <td><%= link_to 'Show', song %></td>

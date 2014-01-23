@@ -3,4 +3,7 @@ class Artist < ActiveRecord::Base
   def list_name
     "#{last}, #{first} #{middle}"
   end
+  def name
+    "#{first} #{middle} #{last}"
+  end
 end

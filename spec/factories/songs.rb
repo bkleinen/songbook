@@ -4,33 +4,33 @@ FactoryGirl.define do
 
   factory :song do
     title 'Hound Dog'
-    artist  'Elvis'
+    artist
+    stars 4
+  end
+
+
+  factory :common , class: Song do
+    title 'Common People'
+    association :artist, factory: :pulp
     stars 4
   end
 
   factory :boots, class: Song do
     title  'These Boots Were Made For Walking'
-    artist 'Nancy Sinatra'
+    artist
+    #association :artist, factory: :nancy
     stars  5
   end
-  factory :norwegian , class: Song do
-    title  'Norwegian Wood'
-    artist 'The Beatles'
-    stars  3
-  end
-    factory :father_and_son , class: Song do
-    title 'Father and Son'
-    artist 'Cat Stevens'
-    stars  3
-  end
+
   factory :gambler , class: Song do
     title 'The Gambler'
-    artist 'Kenny Rogers'
+    association :artist, factory: :kenny
     stars  5
   end
-  factory :common , class: Song do
-    title 'Common People'
-    artist 'Pulp'
-    stars  2
+   factory :father_and_son , class: Song do
+    title 'Father and Son'
+    association :artist, factory: :cat
+    stars  5
   end
+
 end
